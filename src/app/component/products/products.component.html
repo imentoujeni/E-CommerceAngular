@@ -1,0 +1,50 @@
+<div class="imen">
+<div class="card-top container-fluid">
+  <div> 
+      
+    <img  class="yamyam" [src]="yamyouma" alt="">
+
+</div>
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img  class="" [src]="yamyoumty1" alt="">
+                <h6>Tous les produits</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('1')">
+                <img  class="" [src]="yamyoumty2" alt="">
+                <h6>Rouge à lévre</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('2')">
+                <img  class="" [src]="yamyoumty3" alt="">
+                <h6>Palette</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('3')">
+                <img  class="" [src]="yamyoumty4" alt="">
+                <h6>Créme</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let i of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{i.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.description}}</p>
+                <p><strong>Price:</strong> ${{i.price}}</p>
+                <button class="btn btn-secondary" (click)=addtocart(i)>ajouter au panier</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+</div>

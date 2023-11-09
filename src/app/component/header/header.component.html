@@ -1,0 +1,35 @@
+<header>
+    <div class="navbar navbar-dark bg-secondary shadow-sm">
+       <div class="navbar-brand aligne-item-center d-flex">
+<i style="font-size: 30px" class="bi bi-suit-heart"></i>
+ <!--lezem nhot taswira mtaa logo norbetha bl class heki-->
+<strong class="imen" style="font-size: 30px;">
+        Revolution Beauty 
+    </strong>
+    <div class="yamyo">
+    <ul class='nav nav-pills'>
+      
+        <li><a class='nav-link' routerLink="/products">Accueil</a></li>
+     <!--  <li><a class='nav-link' routerLink="/login">Login</a></li>
+        <li><a class='nav-link' routerLink="/sign">SignIn</a></li>--> 
+        <li><a class='nav-link' routerLink="/nous">Qui Somme Nous </a></li>
+        
+        </ul>
+    </div>
+    
+    <div class="form.groupe">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+    </div>
+<span class="fas fa-search search-icon"></span>
+
+</div>
+
+<button routerLink="cart" class="byn btn-secondary">
+   <i style="font-size: 30px " class="fas fa-cart-plus"></i> 
+   
+<div style="font-size: 10px " class="badge by-secondary">{{totalItem}}</div>
+</button>
+
+</div>
+
+    </header>
